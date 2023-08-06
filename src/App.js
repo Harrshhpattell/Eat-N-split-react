@@ -132,8 +132,12 @@ function FormAddFriend({ onAddFriend }) {
 
   return (
     <form className="form-add-friend" onSubmit={handleSubmit}>
+      <i
+        style={{ gridColumn: "2 span", float: "right" }}
+        class="fa-solid fa-person-circle-plus fa-fade"
+      ></i>
       <label>
-        <i className="fa-solid fa-plus fa-flip"></i> Friend name
+        <i class="fa-solid fa-people-robbery fa-bounce"></i> Friend name
       </label>
       <input
         type="text"
