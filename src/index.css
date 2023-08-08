@@ -25,6 +25,15 @@ body {
   justify-content: center;
 }
 
+header {
+  padding: 3rem;
+  margin: 0 0 7rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
 .app {
   min-height: 66vh;
   display: grid;
@@ -166,4 +175,32 @@ form h2 {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   margin-bottom: 1.6rem;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    column-gap: 0; /* No gap between columns */
+  }
+
+  .sidebar {
+    margin-bottom: 1.6rem; /* Add some spacing between sidebar and form */
+  }
+
+  .sidebar ul {
+    margin-bottom: 1.6rem; /* Add some spacing between friends list and button */
+  }
+
+  .sidebar li {
+    grid-template-columns: auto 1fr auto; /* Adjust grid columns for friend items */
+    gap: 1rem; /* Gap between friend item elements */
+    padding: 1rem; /* Reduce padding for friend items */
+  }
+
+  .form-add-friend,
+  .form-split-bill {
+    grid-template-columns: 1fr 12rem;
+    padding: 2rem;
+  }
 }
